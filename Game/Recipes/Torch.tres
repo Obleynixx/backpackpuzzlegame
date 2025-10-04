@@ -11,5 +11,5 @@ inputA = ExtResource("1_ta6mm")
 inputB = ExtResource("2_8u2uw")
 output = ExtResource("3_j3ojp")
 overrideConsumableA = true
-overrideConsumableB = false
+overrideConsumableB = true
 metadata/_custom_type_script = "uid://blqn6o5k2cxyy"
