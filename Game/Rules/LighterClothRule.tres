@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SingleUseData" load_steps=3 format=3 uid="uid://cs0rr1x6g1c5w"]
+
+[ext_resource type="Resource" uid="uid://bnjdhdjsg25oa" path="res://Game/Items/Cloth.tres" id="1_27x84"]
+[ext_resource type="Script" uid="uid://d3ky2rq6sn3ki" path="res://InventorySystem/Data/SingleUseData.gd" id="2_io62m"]
+
+[resource]
+script = ExtResource("2_io62m")
+singleUseId = "Lighter"
+input = ExtResource("1_27x84")
+consumesItem = true
+metadata/_custom_type_script = "uid://d3ky2rq6sn3ki"

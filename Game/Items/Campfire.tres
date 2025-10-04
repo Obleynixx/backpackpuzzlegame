@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bhbcoc4rncbh"]
+
+[ext_resource type="Texture2D" uid="uid://bq1mgdcpgw15g" path="res://Game/Sprites/Campfire.png" id="1_tw28m"]
+[ext_resource type="Script" uid="uid://ceeta1260nu3f" path="res://InventorySystem/Data/ItemData.gd" id="2_h274q"]
+
+[resource]
+script = ExtResource("2_h274q")
+id = "Campfire123"
+displayName = "Campfire"
+icon = ExtResource("1_tw28m")
+consumable = true
+tags = []
+metadata/_custom_type_script = "uid://ceeta1260nu3f"

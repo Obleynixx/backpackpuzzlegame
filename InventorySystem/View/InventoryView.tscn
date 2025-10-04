@@ -1,0 +1,73 @@
+[gd_scene load_steps=17 format=3 uid="uid://cqx0vciss025t"]
+
+[ext_resource type="Script" uid="uid://p66nh7gwoisn" path="res://InventorySystem/View/InventoryView.gd" id="1_b1mvc"]
+[ext_resource type="PackedScene" uid="uid://b7fut4w13cojh" path="res://InventorySystem/View/InventorySlot.tscn" id="1_evvig"]
+[ext_resource type="Script" uid="uid://umti0351asxn" path="res://InventorySystem/InventoryModel.gd" id="3_j13hd"]
+[ext_resource type="Script" uid="uid://b5umbdfainecr" path="res://InventorySystem/Models/RecipeDB.gd" id="4_by8s2"]
+[ext_resource type="Script" uid="uid://blqn6o5k2cxyy" path="res://InventorySystem/Data/RecipeData.gd" id="5_aayti"]
+[ext_resource type="Script" uid="uid://c705kiwkjv6hm" path="res://InventorySystem/Models/SingleUseDB.gd" id="5_drbo7"]
+[ext_resource type="Script" uid="uid://d3ky2rq6sn3ki" path="res://InventorySystem/Data/SingleUseData.gd" id="6_drbo7"]
+[ext_resource type="Resource" uid="uid://calwtv5cjedf5" path="res://Game/Recipes/Twigs.tres" id="6_qbm41"]
+[ext_resource type="Resource" uid="uid://bk2t3imwx6nvn" path="res://Game/Recipes/BundleRocks.tres" id="7_e6cqy"]
+[ext_resource type="Resource" uid="uid://c1tmoc1bemty7" path="res://Game/Recipes/Campfire.tres" id="8_cy40c"]
+[ext_resource type="Resource" uid="uid://6wmwtqqah5wm" path="res://Game/Recipes/DryWetTwig.tres" id="9_0hclv"]
+[ext_resource type="Resource" uid="uid://mnqdfj338lxc" path="res://Game/Rules/LighterTwigRule.tres" id="9_qbm41"]
+[ext_resource type="Resource" uid="uid://34ar1qu7ohb6" path="res://Game/Recipes/Torch.tres" id="10_0d7ru"]
+[ext_resource type="Resource" uid="uid://cqjgquvu0pxe3" path="res://Game/Rules/LighterCampfireRule.tres" id="11_cy40c"]
+[ext_resource type="Resource" uid="uid://cs0rr1x6g1c5w" path="res://Game/Rules/LighterClothRule.tres" id="13_6pcv0"]
+[ext_resource type="Resource" uid="uid://l3nk6x2dyxeg" path="res://Game/Rules/LighterTorchRule.tres" id="16_x3uhf"]
+
+[node name="InventoryView" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_b1mvc")
+modelN = NodePath("InventoryModel")
+slotsContainer = NodePath("GridContainer")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 108.0
+offset_right = 793.0
+offset_bottom = 524.0
+columns = 3
+
+[node name="InventorySlot" parent="GridContainer" instance=ExtResource("1_evvig")]
+layout_mode = 2
+
+[node name="InventorySlot2" parent="GridContainer" instance=ExtResource("1_evvig")]
+layout_mode = 2
+
+[node name="InventorySlot3" parent="GridContainer" instance=ExtResource("1_evvig")]
+layout_mode = 2
+
+[node name="InventorySlot4" parent="GridContainer" instance=ExtResource("1_evvig")]
+layout_mode = 2
+
+[node name="InventorySlot5" parent="GridContainer" instance=ExtResource("1_evvig")]
+layout_mode = 2
+
+[node name="InventorySlot6" parent="GridContainer" instance=ExtResource("1_evvig")]
+layout_mode = 2
+
+[node name="InventorySlot7" parent="GridContainer" instance=ExtResource("1_evvig")]
+layout_mode = 2
+
+[node name="InventorySlot8" parent="GridContainer" instance=ExtResource("1_evvig")]
+layout_mode = 2
+
+[node name="InventorySlot9" parent="GridContainer" instance=ExtResource("1_evvig")]
+layout_mode = 2
+
+[node name="InventoryModel" type="Node" parent="." node_paths=PackedStringArray("recipeDB", "singleUseDB")]
+script = ExtResource("3_j13hd")
+recipeDB = NodePath("../RecipeDB")
+singleUseDB = NodePath("../SingleUseDB")
+
+[node name="RecipeDB" type="Node" parent="."]
+script = ExtResource("4_by8s2")
+recipes = Array[ExtResource("5_aayti")]([ExtResource("6_qbm41"), ExtResource("7_e6cqy"), ExtResource("8_cy40c"), ExtResource("9_0hclv"), ExtResource("10_0d7ru")])
+
+[node name="SingleUseDB" type="Node" parent="."]
+script = ExtResource("5_drbo7")
+rules = Array[ExtResource("6_drbo7")]([ExtResource("9_qbm41"), ExtResource("11_cy40c"), ExtResource("13_6pcv0"), ExtResource("16_x3uhf")])

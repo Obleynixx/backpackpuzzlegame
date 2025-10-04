@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SingleUseData" load_steps=3 format=3 uid="uid://mnqdfj338lxc"]
+
+[ext_resource type="Script" uid="uid://d3ky2rq6sn3ki" path="res://InventorySystem/Data/SingleUseData.gd" id="1_8pd2q"]
+[ext_resource type="Resource" uid="uid://c5ykd415j47qk" path="res://Game/Items/Twigs.tres" id="1_h0xvp"]
+
+[resource]
+script = ExtResource("1_8pd2q")
+singleUseId = "Lighter"
+input = ExtResource("1_h0xvp")
+consumesItem = true
+metadata/_custom_type_script = "uid://d3ky2rq6sn3ki"

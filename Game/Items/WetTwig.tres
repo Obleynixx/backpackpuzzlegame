@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bdrbxt0gn8qbf"]
+
+[ext_resource type="Texture2D" uid="uid://b1sp3lm2t0akf" path="res://Game/Sprites/wetTwig.png" id="1_uhmyw"]
+[ext_resource type="Script" uid="uid://ceeta1260nu3f" path="res://InventorySystem/Data/ItemData.gd" id="2_aq3ie"]
+
+[resource]
+script = ExtResource("2_aq3ie")
+id = "WettTwig123"
+displayName = "Wet Twig"
+icon = ExtResource("1_uhmyw")
+consumable = true
+tags = []
+metadata/_custom_type_script = "uid://ceeta1260nu3f"

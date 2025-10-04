@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://xlpj52wsvs53"]
+
+[ext_resource type="Script" uid="uid://caqk1chuarsvj" path="res://Game/main_scene.gd" id="1_0rahl"]
+[ext_resource type="Script" uid="uid://ceeta1260nu3f" path="res://InventorySystem/Data/ItemData.gd" id="2_5p4mb"]
+[ext_resource type="Resource" uid="uid://fgujni8ja3xj" path="res://Game/Items/Twig.tres" id="3_6qx7l"]
+[ext_resource type="Resource" uid="uid://c5ykd415j47qk" path="res://Game/Items/Twigs.tres" id="4_as82g"]
+[ext_resource type="PackedScene" uid="uid://cqx0vciss025t" path="res://InventorySystem/View/InventoryView.tscn" id="5_n4qd3"]
+[ext_resource type="Script" uid="uid://c1obvl524mro2" path="res://InventorySystem/View/SingleUseButton.gd" id="6_ap400"]
+[ext_resource type="Texture2D" uid="uid://cnme4qwvpgadg" path="res://Game/Sprites/LigherTest.png" id="7_6jlq2"]
+
+[node name="Level1" type="Node2D" node_paths=PackedStringArray("view")]
+script = ExtResource("1_0rahl")
+view = NodePath("InventoryView")
+firstItems = Array[ExtResource("2_5p4mb")]([ExtResource("3_6qx7l"), ExtResource("3_6qx7l"), ExtResource("3_6qx7l"), ExtResource("3_6qx7l"), ExtResource("4_as82g"), ExtResource("3_6qx7l"), ExtResource("3_6qx7l"), ExtResource("3_6qx7l"), ExtResource("3_6qx7l")])
+
+[node name="InventoryView" parent="." instance=ExtResource("5_n4qd3")]
+offset_left = -1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = 1.0
+
+[node name="SingleUseButton" type="Button" parent="."]
+offset_left = 175.0
+offset_top = 190.0
+offset_right = 287.0
+offset_bottom = 420.0
+script = ExtResource("6_ap400")
+singleUseID = "Lighter"
+inventoryView = NodePath("../InventoryView")
+
+[node name="TextureRect" type="TextureRect" parent="SingleUseButton"]
+layout_mode = 0
+offset_left = -20.0
+offset_top = -1.0
+offset_right = 133.0
+offset_bottom = 219.0
+mouse_filter = 2
+texture = ExtResource("7_6jlq2")

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://c5ykd415j47qk"]
+
+[ext_resource type="Texture2D" uid="uid://bumjh5gkm8ick" path="res://Game/Sprites/twigs.png" id="1_ipq86"]
+[ext_resource type="Script" uid="uid://ceeta1260nu3f" path="res://InventorySystem/Data/ItemData.gd" id="2_ly5i2"]
+
+[resource]
+script = ExtResource("2_ly5i2")
+id = "Twigs123"
+displayName = "Twigs"
+icon = ExtResource("1_ipq86")
+consumable = true
+tags = []
+metadata/_custom_type_script = "uid://ceeta1260nu3f"

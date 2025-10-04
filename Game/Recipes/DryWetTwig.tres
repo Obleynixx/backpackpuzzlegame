@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RecipeData" load_steps=5 format=3 uid="uid://6wmwtqqah5wm"]
+
+[ext_resource type="Resource" uid="uid://bdrbxt0gn8qbf" path="res://Game/Items/WetTwig.tres" id="1_wt0qx"]
+[ext_resource type="Resource" uid="uid://bnjdhdjsg25oa" path="res://Game/Items/Cloth.tres" id="2_i7506"]
+[ext_resource type="Resource" uid="uid://fgujni8ja3xj" path="res://Game/Items/Twig.tres" id="3_a4ncd"]
+[ext_resource type="Script" uid="uid://blqn6o5k2cxyy" path="res://InventorySystem/Data/RecipeData.gd" id="3_i7506"]
+
+[resource]
+script = ExtResource("3_i7506")
+inputA = ExtResource("1_wt0qx")
+inputB = ExtResource("2_i7506")
+output = ExtResource("3_a4ncd")
+metadata/_custom_type_script = "uid://blqn6o5k2cxyy"
