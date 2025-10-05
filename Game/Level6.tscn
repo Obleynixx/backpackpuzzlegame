@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://bv4ecd5f4gm6i"]
+[gd_scene load_steps=11 format=3 uid="uid://bv4ecd5f4gm6i"]
 
 [ext_resource type="Script" uid="uid://caqk1chuarsvj" path="res://Game/main_scene.gd" id="1_qtx53"]
 [ext_resource type="Script" uid="uid://ceeta1260nu3f" path="res://InventorySystem/Data/ItemData.gd" id="2_xv7th"]
 [ext_resource type="Resource" uid="uid://fgujni8ja3xj" path="res://Game/Items/Twig.tres" id="3_ei4r0"]
+[ext_resource type="Resource" uid="uid://bdrbxt0gn8qbf" path="res://Game/Items/WetTwig.tres" id="3_xv7th"]
 [ext_resource type="Resource" uid="uid://bnjdhdjsg25oa" path="res://Game/Items/Cloth.tres" id="4_osng7"]
 [ext_resource type="Resource" uid="uid://cy7lii3snifco" path="res://Game/Items/LitCampfire.tres" id="4_qtx53"]
 [ext_resource type="PackedScene" uid="uid://cqx0vciss025t" path="res://InventorySystem/View/InventoryView.tscn" id="6_op865"]
@@ -13,7 +14,7 @@
 [node name="Level6" type="Node2D" node_paths=PackedStringArray("view")]
 script = ExtResource("1_qtx53")
 view = NodePath("InventoryView")
-firstItems = Array[ExtResource("2_xv7th")]([ExtResource("3_ei4r0"), ExtResource("4_qtx53"), ExtResource("3_ei4r0"), ExtResource("4_osng7")])
+firstItems = Array[ExtResource("2_xv7th")]([ExtResource("3_xv7th"), ExtResource("4_qtx53"), ExtResource("3_ei4r0"), ExtResource("4_osng7"), ExtResource("4_osng7")])
 next_scene_path = "uid://xlpj52wsvs53"
 
 [node name="InventoryView" parent="." instance=ExtResource("6_op865")]

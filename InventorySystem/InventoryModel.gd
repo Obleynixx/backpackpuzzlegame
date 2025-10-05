@@ -3,8 +3,8 @@ class_name InventoryModel
 
 signal itemAdded
 signal itemRemoved
-signal itemsCombined
-signal itemsSingleUsed
+signal itemsCombined(a: ItemData, b: ItemData, r: RecipeData)
+signal itemsSingleUsed(it: ItemData, singleUseId: String, output: ItemData)
 signal inventoryCleared
 
 var rows := 3
@@ -50,7 +50,7 @@ func Combine(i: int, j: int) -> bool:
 	AddItem(r.output)
 	if r.outputOptional != null:
 		AddItem(r.outputOptional)
-	itemsCombined.emit(a,b,r.output)
+	itemsCombined.emit(a,b,r)
 	CheckEmpty()
 	return true
 
@@ -64,7 +64,7 @@ func SingleUse(i: int, singleUseId: String) -> bool:
 		itemRemoved.emit(item)
 	if rule.output:
 		AddItem(rule.output)
-	itemsSingleUsed.emit(item,singleUseId,rule.output)
+	itemsSingleUsed.emit(item,singleUseId,rule)
 	CheckEmpty()
 	return true
 		

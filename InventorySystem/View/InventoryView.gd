@@ -40,8 +40,8 @@ func BindSlot(slot: InventorySlot, index: int):
 func BindModelSignals():
 	model.itemAdded.connect(func(it): RefreshAll())
 	model.itemRemoved.connect(func(it): RefreshAll())
-	model.itemsCombined.connect(func(a,b,output): RefreshAll())
-	model.itemsSingleUsed.connect(func(it,id,out): RefreshAll())
+	model.itemsCombined.connect(func(a,b,recipe): RefreshAll())
+	model.itemsSingleUsed.connect(func(it,id,rule): RefreshAll())
 	model.inventoryCleared.connect(func():
 		OnInventoryCleared()
 		onInventoryCleared.emit())

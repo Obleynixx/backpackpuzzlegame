@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cqx0vciss025t"]
+[gd_scene load_steps=30 format=3 uid="uid://cqx0vciss025t"]
 
 [ext_resource type="Script" uid="uid://p66nh7gwoisn" path="res://InventorySystem/View/InventoryView.gd" id="1_b1mvc"]
 [ext_resource type="PackedScene" uid="uid://b7fut4w13cojh" path="res://InventorySystem/View/InventorySlot.tscn" id="1_evvig"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://b5umbdfainecr" path="res://InventorySystem/Models/RecipeDB.gd" id="4_by8s2"]
 [ext_resource type="Script" uid="uid://blqn6o5k2cxyy" path="res://InventorySystem/Data/RecipeData.gd" id="5_aayti"]
 [ext_resource type="Script" uid="uid://c705kiwkjv6hm" path="res://InventorySystem/Models/SingleUseDB.gd" id="5_drbo7"]
+[ext_resource type="Script" uid="uid://di1hvca7iu4yp" path="res://InventorySystem/View/PlayAudio.gd" id="5_qcgnx"]
 [ext_resource type="Script" uid="uid://d3ky2rq6sn3ki" path="res://InventorySystem/Data/SingleUseData.gd" id="6_drbo7"]
 [ext_resource type="Resource" uid="uid://calwtv5cjedf5" path="res://Game/Recipes/Twigs.tres" id="6_qbm41"]
 [ext_resource type="Resource" uid="uid://bk2t3imwx6nvn" path="res://Game/Recipes/BundleRocks.tres" id="7_e6cqy"]
@@ -25,7 +26,9 @@
 [ext_resource type="Resource" uid="uid://et5hdt40ykt8" path="res://Game/Recipes/LitCampfireClothTorch.tres" id="17_np8lx"]
 [ext_resource type="Resource" uid="uid://de66eb6mg3rrp" path="res://Game/Recipes/LitCampfireCloth.tres" id="18_40kfn"]
 [ext_resource type="Resource" uid="uid://oph7gs3v86ai" path="res://Game/Rules/LighterLitCampfireRule.tres" id="18_yq8ny"]
+[ext_resource type="Resource" uid="uid://bd0ysh7for5p6" path="res://Game/Recipes/LitCampfireTwigs.tres" id="19_p1axd"]
 [ext_resource type="Resource" uid="uid://021cvh8y60ve" path="res://Game/Rules/LighterWetClothRule.tres" id="20_2sdfy"]
+[ext_resource type="AudioStream" uid="uid://dwlx5xvtju3g2" path="res://Game/Sounds/Pop.ogg" id="28_0hqvn"]
 
 [node name="InventoryView" type="Control"]
 layout_mode = 3
@@ -74,10 +77,16 @@ script = ExtResource("3_j13hd")
 recipeDB = NodePath("../RecipeDB")
 singleUseDB = NodePath("../SingleUseDB")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="InventoryModel"]
+stream = ExtResource("28_0hqvn")
+script = ExtResource("5_qcgnx")
+
 [node name="RecipeDB" type="Node" parent="."]
 script = ExtResource("4_by8s2")
-recipes = Array[ExtResource("5_aayti")]([ExtResource("6_qbm41"), ExtResource("7_e6cqy"), ExtResource("8_cy40c"), ExtResource("9_0hclv"), ExtResource("10_0d7ru"), ExtResource("11_uj3oi"), ExtResource("12_rpe7p"), ExtResource("13_kfu0b"), ExtResource("14_gmb7c"), ExtResource("15_1lrqa"), ExtResource("16_rfibp"), ExtResource("17_np8lx"), ExtResource("18_40kfn")])
+recipes = Array[ExtResource("5_aayti")]([ExtResource("6_qbm41"), ExtResource("7_e6cqy"), ExtResource("8_cy40c"), ExtResource("9_0hclv"), ExtResource("10_0d7ru"), ExtResource("11_uj3oi"), ExtResource("12_rpe7p"), ExtResource("13_kfu0b"), ExtResource("14_gmb7c"), ExtResource("15_1lrqa"), ExtResource("16_rfibp"), ExtResource("17_np8lx"), ExtResource("18_40kfn"), ExtResource("19_p1axd")])
 
 [node name="SingleUseDB" type="Node" parent="."]
 script = ExtResource("5_drbo7")
 rules = Array[ExtResource("6_drbo7")]([ExtResource("9_qbm41"), ExtResource("11_cy40c"), ExtResource("13_6pcv0"), ExtResource("16_x3uhf"), ExtResource("18_yq8ny"), ExtResource("20_2sdfy")])
+
+[connection signal="itemsCombined" from="InventoryModel" to="InventoryModel/AudioStreamPlayer" method="PlayOneShotCombined"]

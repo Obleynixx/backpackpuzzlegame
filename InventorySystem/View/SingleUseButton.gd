@@ -4,6 +4,7 @@ class_name SingleUseButton
 @export var singleUseID: String
 @export var inventoryView: NodePath
 
+
 var view: InventoryView
 
 func _ready() -> void:

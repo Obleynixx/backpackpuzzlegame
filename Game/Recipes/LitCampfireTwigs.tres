@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RecipeData" load_steps=5 format=3 uid="uid://bd0ysh7for5p6"]
+
+[ext_resource type="Resource" uid="uid://cy7lii3snifco" path="res://Game/Items/LitCampfire.tres" id="1_1rbvs"]
+[ext_resource type="Resource" uid="uid://c5ykd415j47qk" path="res://Game/Items/Twigs.tres" id="2_1rbvs"]
+[ext_resource type="Script" uid="uid://blqn6o5k2cxyy" path="res://InventorySystem/Data/RecipeData.gd" id="3_asyg5"]
+[ext_resource type="AudioStream" uid="uid://bfg8kgycf4r0c" path="res://Game/Sounds/Fire.ogg" id="3_eikt5"]
+
+[resource]
+script = ExtResource("3_asyg5")
+inputA = ExtResource("1_1rbvs")
+inputB = ExtResource("2_1rbvs")
+recipeSound = ExtResource("3_eikt5")
+metadata/_custom_type_script = "uid://blqn6o5k2cxyy"

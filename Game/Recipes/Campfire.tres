@@ -1,13 +1,15 @@
-[gd_resource type="Resource" script_class="RecipeData" load_steps=5 format=3 uid="uid://c1tmoc1bemty7"]
+[gd_resource type="Resource" script_class="RecipeData" load_steps=6 format=3 uid="uid://c1tmoc1bemty7"]
 
 [ext_resource type="Resource" uid="uid://c5ykd415j47qk" path="res://Game/Items/Twigs.tres" id="2_8r7h6"]
 [ext_resource type="Resource" uid="uid://bbo85sibvlkvr" path="res://Game/Items/BaseRocks.tres" id="2_k60s8"]
 [ext_resource type="Script" uid="uid://blqn6o5k2cxyy" path="res://InventorySystem/Data/RecipeData.gd" id="3_ea06h"]
 [ext_resource type="Resource" uid="uid://bhbcoc4rncbh" path="res://Game/Items/Campfire.tres" id="3_k60s8"]
+[ext_resource type="AudioStream" uid="uid://dwlx5xvtju3g2" path="res://Game/Sounds/Pop.ogg" id="4_ea06h"]
 
 [resource]
 script = ExtResource("3_ea06h")
 inputA = ExtResource("2_k60s8")
 inputB = ExtResource("2_8r7h6")
 output = ExtResource("3_k60s8")
+recipeSound = ExtResource("4_ea06h")
 metadata/_custom_type_script = "uid://blqn6o5k2cxyy"

@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://qi455nvvu1hw"]
+[gd_scene load_steps=5 format=3 uid="uid://qi455nvvu1hw"]
 
 [ext_resource type="Script" uid="uid://dlletihkbocdt" path="res://Scripts/RetryButton.gd" id="1_cviep"]
 [ext_resource type="Texture2D" uid="uid://b7smbndrevm4s" path="res://Game/Sprites/RetryIcon.png" id="1_mri78"]
+[ext_resource type="Script" uid="uid://b0e7esiwkrh0" path="res://Scripts/AudioSlider.gd" id="3_uo4gr"]
+[ext_resource type="Texture2D" uid="uid://cp7vhm5eyrgoo" path="res://Game/Sprites/SoundSprite.png" id="3_xb1ej"]
 
 [node name="LevelsUi" type="Control"]
 layout_mode = 3
@@ -25,3 +27,20 @@ offset_right = 96.0
 offset_bottom = 95.0
 mouse_filter = 2
 texture = ExtResource("1_mri78")
+
+[node name="HSlider" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 25.0
+offset_right = 271.0
+offset_bottom = 41.0
+script = ExtResource("3_uo4gr")
+
+[node name="TextureRect" type="TextureRect" parent="HSlider"]
+layout_mode = 0
+offset_left = -51.0
+offset_top = -10.0
+offset_right = -12.0
+offset_bottom = 29.0
+texture = ExtResource("3_xb1ej")
+expand_mode = 1

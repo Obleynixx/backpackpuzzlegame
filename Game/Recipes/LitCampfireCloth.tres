@@ -1,12 +1,14 @@
-[gd_resource type="Resource" script_class="RecipeData" load_steps=4 format=3 uid="uid://de66eb6mg3rrp"]
+[gd_resource type="Resource" script_class="RecipeData" load_steps=5 format=3 uid="uid://de66eb6mg3rrp"]
 
 [ext_resource type="Resource" uid="uid://cy7lii3snifco" path="res://Game/Items/LitCampfire.tres" id="1_7u2jf"]
 [ext_resource type="Resource" uid="uid://bnjdhdjsg25oa" path="res://Game/Items/Cloth.tres" id="2_j8d5r"]
+[ext_resource type="AudioStream" uid="uid://bfg8kgycf4r0c" path="res://Game/Sounds/Fire.ogg" id="3_7u2jf"]
 [ext_resource type="Script" uid="uid://blqn6o5k2cxyy" path="res://InventorySystem/Data/RecipeData.gd" id="4_p2psi"]
 
 [resource]
 script = ExtResource("4_p2psi")
 inputA = ExtResource("1_7u2jf")
 inputB = ExtResource("2_j8d5r")
+recipeSound = ExtResource("3_7u2jf")
 overrideConsumableB = true
 metadata/_custom_type_script = "uid://blqn6o5k2cxyy"

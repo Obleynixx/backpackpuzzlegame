@@ -1,15 +1,17 @@
-[gd_resource type="Resource" script_class="RecipeData" load_steps=5 format=3 uid="uid://34ar1qu7ohb6"]
+[gd_resource type="Resource" script_class="RecipeData" load_steps=6 format=3 uid="uid://34ar1qu7ohb6"]
 
 [ext_resource type="Resource" uid="uid://bnjdhdjsg25oa" path="res://Game/Items/Cloth.tres" id="1_ta6mm"]
 [ext_resource type="Resource" uid="uid://fgujni8ja3xj" path="res://Game/Items/Twig.tres" id="2_8u2uw"]
 [ext_resource type="Script" uid="uid://blqn6o5k2cxyy" path="res://InventorySystem/Data/RecipeData.gd" id="3_8u2uw"]
 [ext_resource type="Resource" uid="uid://ddopxbcbuj623" path="res://Game/Items/Torch.tres" id="3_j3ojp"]
+[ext_resource type="AudioStream" uid="uid://dwlx5xvtju3g2" path="res://Game/Sounds/Pop.ogg" id="4_8u2uw"]
 
 [resource]
 script = ExtResource("3_8u2uw")
 inputA = ExtResource("1_ta6mm")
 inputB = ExtResource("2_8u2uw")
 output = ExtResource("3_j3ojp")
+recipeSound = ExtResource("4_8u2uw")
 overrideConsumableA = true
 overrideConsumableB = true
 metadata/_custom_type_script = "uid://blqn6o5k2cxyy"
