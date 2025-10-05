@@ -1,12 +1,14 @@
-[gd_resource type="Resource" script_class="SingleUseData" load_steps=4 format=3 uid="uid://l3nk6x2dyxeg"]
+[gd_resource type="Resource" script_class="SingleUseData" load_steps=5 format=3 uid="uid://l3nk6x2dyxeg"]
 
 [ext_resource type="Resource" uid="uid://ddopxbcbuj623" path="res://Game/Items/Torch.tres" id="1_6lk6t"]
 [ext_resource type="Resource" uid="uid://chuymcidlgte4" path="res://Game/Items/LitTorch.tres" id="2_nyvjx"]
 [ext_resource type="Script" uid="uid://d3ky2rq6sn3ki" path="res://InventorySystem/Data/SingleUseData.gd" id="2_yo1il"]
+[ext_resource type="AudioStream" uid="uid://bfg8kgycf4r0c" path="res://Game/Sounds/Fire.ogg" id="4_mkf60"]
 
 [resource]
 script = ExtResource("2_yo1il")
 singleUseId = "Lighter"
 input = ExtResource("1_6lk6t")
 output = ExtResource("2_nyvjx")
+singleUseSound = ExtResource("4_mkf60")
 metadata/_custom_type_script = "uid://d3ky2rq6sn3ki"

@@ -4,7 +4,7 @@ class_name InventoryModel
 signal itemAdded
 signal itemRemoved
 signal itemsCombined(a: ItemData, b: ItemData, r: RecipeData)
-signal itemsSingleUsed(it: ItemData, singleUseId: String, output: ItemData)
+signal itemsSingleUsed(it: ItemData, singleUseId: String, rule: SingleUseData)
 signal inventoryCleared
 
 var rows := 3

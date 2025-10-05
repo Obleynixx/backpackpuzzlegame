@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="RecipeData" load_steps=6 format=3 uid="uid://drsjy5nm1nfto"]
+
+[ext_resource type="Resource" uid="uid://d4e1tuhxvhgya" path="res://Game/Items/WetCloth.tres" id="1_5fkdk"]
+[ext_resource type="Resource" uid="uid://chuymcidlgte4" path="res://Game/Items/LitTorch.tres" id="2_44b1f"]
+[ext_resource type="Resource" uid="uid://ddopxbcbuj623" path="res://Game/Items/Torch.tres" id="3_pn0vy"]
+[ext_resource type="AudioStream" uid="uid://dwlx5xvtju3g2" path="res://Game/Sounds/Pop.ogg" id="4_jnqyi"]
+[ext_resource type="Script" uid="uid://blqn6o5k2cxyy" path="res://InventorySystem/Data/RecipeData.gd" id="5_0iopw"]
+
+[resource]
+script = ExtResource("5_0iopw")
+inputA = ExtResource("1_5fkdk")
+inputB = ExtResource("2_44b1f")
+output = ExtResource("3_pn0vy")
+recipeSound = ExtResource("4_jnqyi")
+overrideConsumableA = true
+overrideConsumableB = true
+metadata/_custom_type_script = "uid://blqn6o5k2cxyy"
