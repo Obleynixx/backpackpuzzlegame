@@ -24,7 +24,6 @@ func AddItem(item: ItemData) -> bool:
 	if idx == -1: return false
 	cells[idx] = item
 	itemAdded.emit(item)
-	print("item added " + item.displayName)
 	CheckEmpty()
 	return true
 	
@@ -40,12 +39,19 @@ func Combine(i: int, j: int) -> bool:
 	var a : ItemData = cells[i]
 	var b : ItemData = cells[j]
 	if not a or not b or i == j: return false
-	var out := recipeDB.GetRecipeData(a,b)
-	if out == null: return false
-	if a.consumable or out.overrideConsumableA: cells[i] = null
-	if b.consumable or out.overrideConsumableB: cells[j] = null
-	AddItem(out.output)
-	itemsCombined.emit(a,b,out.output)
+	var r := recipeDB.GetRecipeData(a,b)
+	if r == null: return false
+	var consume_i := a.consumable \
+		or ((a == r.inputA and r.overrideConsumableA) or (a == r.inputB and r.overrideConsumableB))
+	var consume_j := b.consumable \
+		or ((b == r.inputA and r.overrideConsumableA) or (b == r.inputB and r.overrideConsumableB))
+	if consume_i: cells[i] = null
+	if consume_j: cells[j] = null
+	AddItem(r.output)
+	if r.outputOptional != null:
+		AddItem(r.outputOptional)
+	itemsCombined.emit(a,b,r.output)
+	CheckEmpty()
 	return true
 
 func SingleUse(i: int, singleUseId: String) -> bool:
@@ -57,7 +63,7 @@ func SingleUse(i: int, singleUseId: String) -> bool:
 		cells[i] = null
 		itemRemoved.emit(item)
 	if rule.output:
-		AddItem(rule.outputItem)
+		AddItem(rule.output)
 	itemsSingleUsed.emit(item,singleUseId,rule.output)
 	CheckEmpty()
 	return true

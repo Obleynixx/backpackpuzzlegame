@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://qi455nvvu1hw"]
+
+[ext_resource type="Script" uid="uid://dlletihkbocdt" path="res://Scripts/RetryButton.gd" id="1_cviep"]
+[ext_resource type="Texture2D" uid="uid://b7smbndrevm4s" path="res://Game/Sprites/RetryIcon.png" id="1_mri78"]
+
+[node name="LevelsUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 871.0
+offset_top = 450.0
+offset_right = 967.0
+offset_bottom = 546.0
+script = ExtResource("1_cviep")
+
+[node name="TextureRect" type="TextureRect" parent="Button"]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 95.0
+mouse_filter = 2
+texture = ExtResource("1_mri78")

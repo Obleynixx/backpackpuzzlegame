@@ -8,6 +8,8 @@ var model : InventoryModel
 var slots : Array[InventorySlot] = []
 var selectedIndex := -1
 
+signal onInventoryCleared
+
 func _ready() -> void:
 	model = get_node(modelN) as InventoryModel
 	BuildOrBindSlots()
@@ -40,7 +42,9 @@ func BindModelSignals():
 	model.itemRemoved.connect(func(it): RefreshAll())
 	model.itemsCombined.connect(func(a,b,output): RefreshAll())
 	model.itemsSingleUsed.connect(func(it,id,out): RefreshAll())
-	model.inventoryCleared.connect(func(): OnInventoryCleared())
+	model.inventoryCleared.connect(func():
+		OnInventoryCleared()
+		onInventoryCleared.emit())
 	
 func RefreshAll():
 	for i in slots.size():

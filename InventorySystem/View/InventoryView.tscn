@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cqx0vciss025t"]
+[gd_scene load_steps=27 format=3 uid="uid://cqx0vciss025t"]
 
 [ext_resource type="Script" uid="uid://p66nh7gwoisn" path="res://InventorySystem/View/InventoryView.gd" id="1_b1mvc"]
 [ext_resource type="PackedScene" uid="uid://b7fut4w13cojh" path="res://InventorySystem/View/InventorySlot.tscn" id="1_evvig"]
@@ -14,8 +14,18 @@
 [ext_resource type="Resource" uid="uid://mnqdfj338lxc" path="res://Game/Rules/LighterTwigRule.tres" id="9_qbm41"]
 [ext_resource type="Resource" uid="uid://34ar1qu7ohb6" path="res://Game/Recipes/Torch.tres" id="10_0d7ru"]
 [ext_resource type="Resource" uid="uid://cqjgquvu0pxe3" path="res://Game/Rules/LighterCampfireRule.tres" id="11_cy40c"]
+[ext_resource type="Resource" uid="uid://ch7j7ci6rrb2e" path="res://Game/Recipes/FireCampfire.tres" id="11_uj3oi"]
+[ext_resource type="Resource" uid="uid://b8qdxp7tq7w3m" path="res://Game/Recipes/ClothCampfire.tres" id="12_rpe7p"]
 [ext_resource type="Resource" uid="uid://cs0rr1x6g1c5w" path="res://Game/Rules/LighterClothRule.tres" id="13_6pcv0"]
+[ext_resource type="Resource" uid="uid://d4ctyc3p753ju" path="res://Game/Recipes/TwigLitCampfire.tres" id="13_kfu0b"]
+[ext_resource type="Resource" uid="uid://c0iu8qyqbugx8" path="res://Game/Recipes/WetClothCampfire.tres" id="14_gmb7c"]
+[ext_resource type="Resource" uid="uid://ts472kqqamiw" path="res://Game/Recipes/LitTorchCampfire.tres" id="15_1lrqa"]
+[ext_resource type="Resource" uid="uid://dy5dai0iyuvwd" path="res://Game/Recipes/LitTorchClothCampfire.tres" id="16_rfibp"]
 [ext_resource type="Resource" uid="uid://l3nk6x2dyxeg" path="res://Game/Rules/LighterTorchRule.tres" id="16_x3uhf"]
+[ext_resource type="Resource" uid="uid://et5hdt40ykt8" path="res://Game/Recipes/LitCampfireClothTorch.tres" id="17_np8lx"]
+[ext_resource type="Resource" uid="uid://de66eb6mg3rrp" path="res://Game/Recipes/LitCampfireCloth.tres" id="18_40kfn"]
+[ext_resource type="Resource" uid="uid://oph7gs3v86ai" path="res://Game/Rules/LighterLitCampfireRule.tres" id="18_yq8ny"]
+[ext_resource type="Resource" uid="uid://021cvh8y60ve" path="res://Game/Rules/LighterWetClothRule.tres" id="20_2sdfy"]
 
 [node name="InventoryView" type="Control"]
 layout_mode = 3
@@ -66,8 +76,8 @@ singleUseDB = NodePath("../SingleUseDB")
 
 [node name="RecipeDB" type="Node" parent="."]
 script = ExtResource("4_by8s2")
-recipes = Array[ExtResource("5_aayti")]([ExtResource("6_qbm41"), ExtResource("7_e6cqy"), ExtResource("8_cy40c"), ExtResource("9_0hclv"), ExtResource("10_0d7ru")])
+recipes = Array[ExtResource("5_aayti")]([ExtResource("6_qbm41"), ExtResource("7_e6cqy"), ExtResource("8_cy40c"), ExtResource("9_0hclv"), ExtResource("10_0d7ru"), ExtResource("11_uj3oi"), ExtResource("12_rpe7p"), ExtResource("13_kfu0b"), ExtResource("14_gmb7c"), ExtResource("15_1lrqa"), ExtResource("16_rfibp"), ExtResource("17_np8lx"), ExtResource("18_40kfn")])
 
 [node name="SingleUseDB" type="Node" parent="."]
 script = ExtResource("5_drbo7")
-rules = Array[ExtResource("6_drbo7")]([ExtResource("9_qbm41"), ExtResource("11_cy40c"), ExtResource("13_6pcv0"), ExtResource("16_x3uhf")])
+rules = Array[ExtResource("6_drbo7")]([ExtResource("9_qbm41"), ExtResource("11_cy40c"), ExtResource("13_6pcv0"), ExtResource("16_x3uhf"), ExtResource("18_yq8ny"), ExtResource("20_2sdfy")])

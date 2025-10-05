@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="RecipeData" load_steps=5 format=3 uid="uid://dy5dai0iyuvwd"]
+
+[ext_resource type="Resource" uid="uid://chuymcidlgte4" path="res://Game/Items/LitTorch.tres" id="1_m272i"]
+[ext_resource type="Resource" uid="uid://cvfr8fpmacu6t" path="res://Game/Items/ClothCampfire.tres" id="3_fc3rw"]
+[ext_resource type="Resource" uid="uid://cy7lii3snifco" path="res://Game/Items/LitCampfire.tres" id="3_ki6um"]
+[ext_resource type="Script" uid="uid://blqn6o5k2cxyy" path="res://InventorySystem/Data/RecipeData.gd" id="4_cveai"]
+
+[resource]
+script = ExtResource("4_cveai")
+inputA = ExtResource("1_m272i")
+inputB = ExtResource("3_fc3rw")
+output = ExtResource("3_ki6um")
+overrideConsumableA = true
+overrideConsumableB = true
+metadata/_custom_type_script = "uid://blqn6o5k2cxyy"

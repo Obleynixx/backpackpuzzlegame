@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://chuymcidlgte4"]
+
+[ext_resource type="Texture2D" uid="uid://dtwnxb63p00aw" path="res://Game/Sprites/TorchOnFire.png" id="1_1m4yk"]
+[ext_resource type="Script" uid="uid://ceeta1260nu3f" path="res://InventorySystem/Data/ItemData.gd" id="2_kseb4"]
+
+[resource]
+script = ExtResource("2_kseb4")
+id = "TorchFire123"
+displayName = "TorchFire"
+icon = ExtResource("1_1m4yk")
+metadata/_custom_type_script = "uid://ceeta1260nu3f"

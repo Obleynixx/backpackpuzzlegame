@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnme4qwvpgadg"
-path="res://.godot/imported/LigherTest.png-d09db2e3434841778f83424eb394a0db.ctex"
+uid="uid://bb74kofxumjkr"
+path="res://.godot/imported/LitCampfire.png-6c3818f203934d7ffa3fac88d5162c59.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game/Sprites/LigherTest.png"
-dest_files=["res://.godot/imported/LigherTest.png-d09db2e3434841778f83424eb394a0db.ctex"]
+source_file="res://Game/Sprites/LitCampfire.png"
+dest_files=["res://.godot/imported/LitCampfire.png-6c3818f203934d7ffa3fac88d5162c59.ctex"]
 
 [params]
 

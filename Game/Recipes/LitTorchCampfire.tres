@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="RecipeData" load_steps=4 format=3 uid="uid://ts472kqqamiw"]
+
+[ext_resource type="Resource" uid="uid://chuymcidlgte4" path="res://Game/Items/LitTorch.tres" id="1_le6fr"]
+[ext_resource type="Resource" uid="uid://bhbcoc4rncbh" path="res://Game/Items/Campfire.tres" id="2_25bo4"]
+[ext_resource type="Script" uid="uid://blqn6o5k2cxyy" path="res://InventorySystem/Data/RecipeData.gd" id="3_mtary"]
+
+[resource]
+script = ExtResource("3_mtary")
+inputA = ExtResource("1_le6fr")
+inputB = ExtResource("2_25bo4")
+metadata/_custom_type_script = "uid://blqn6o5k2cxyy"

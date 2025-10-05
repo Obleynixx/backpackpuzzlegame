@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="RecipeData" load_steps=5 format=3 uid="uid://c0iu8qyqbugx8"]
+
+[ext_resource type="Resource" uid="uid://d4e1tuhxvhgya" path="res://Game/Items/WetCloth.tres" id="1_2ybif"]
+[ext_resource type="Resource" uid="uid://cy7lii3snifco" path="res://Game/Items/LitCampfire.tres" id="2_a3u4p"]
+[ext_resource type="Resource" uid="uid://bhbcoc4rncbh" path="res://Game/Items/Campfire.tres" id="2_i8482"]
+[ext_resource type="Script" uid="uid://blqn6o5k2cxyy" path="res://InventorySystem/Data/RecipeData.gd" id="4_q3v58"]
+
+[resource]
+script = ExtResource("4_q3v58")
+inputA = ExtResource("1_2ybif")
+inputB = ExtResource("2_a3u4p")
+output = ExtResource("2_i8482")
+overrideConsumableA = true
+overrideConsumableB = true
+metadata/_custom_type_script = "uid://blqn6o5k2cxyy"

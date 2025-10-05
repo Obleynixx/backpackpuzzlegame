@@ -1,0 +1,44 @@
+[gd_scene load_steps=11 format=3 uid="uid://ivc3an84fpcc"]
+
+[ext_resource type="Script" uid="uid://caqk1chuarsvj" path="res://Game/main_scene.gd" id="1_qe2ap"]
+[ext_resource type="Script" uid="uid://ceeta1260nu3f" path="res://InventorySystem/Data/ItemData.gd" id="2_2o03n"]
+[ext_resource type="Resource" uid="uid://bq2sdyruavlwr" path="res://Game/Items/TwoRocks.tres" id="3_74so8"]
+[ext_resource type="Resource" uid="uid://bdrbxt0gn8qbf" path="res://Game/Items/WetTwig.tres" id="4_js72k"]
+[ext_resource type="Resource" uid="uid://bnjdhdjsg25oa" path="res://Game/Items/Cloth.tres" id="5_ej0ha"]
+[ext_resource type="Resource" uid="uid://fgujni8ja3xj" path="res://Game/Items/Twig.tres" id="6_k6efv"]
+[ext_resource type="PackedScene" uid="uid://cqx0vciss025t" path="res://InventorySystem/View/InventoryView.tscn" id="7_5lyl2"]
+[ext_resource type="Script" uid="uid://c1obvl524mro2" path="res://InventorySystem/View/SingleUseButton.gd" id="8_4fbst"]
+[ext_resource type="Texture2D" uid="uid://cnme4qwvpgadg" path="res://Game/Sprites/LigherTest.png" id="9_pmmco"]
+[ext_resource type="PackedScene" uid="uid://qi455nvvu1hw" path="res://Game/Levels_UI.tscn" id="10_2x05i"]
+
+[node name="Level5" type="Node2D" node_paths=PackedStringArray("view")]
+script = ExtResource("1_qe2ap")
+view = NodePath("InventoryView")
+firstItems = Array[ExtResource("2_2o03n")]([ExtResource("3_74so8"), ExtResource("3_74so8"), ExtResource("4_js72k"), ExtResource("4_js72k"), ExtResource("5_ej0ha"), ExtResource("6_k6efv"), ExtResource("5_ej0ha")])
+next_scene_path = "uid://bv4ecd5f4gm6i"
+
+[node name="InventoryView" parent="." instance=ExtResource("7_5lyl2")]
+offset_left = -1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = 1.0
+
+[node name="SingleUseButton" type="Button" parent="."]
+offset_left = 175.0
+offset_top = 190.0
+offset_right = 287.0
+offset_bottom = 420.0
+script = ExtResource("8_4fbst")
+singleUseID = "Lighter"
+inventoryView = NodePath("../InventoryView")
+
+[node name="TextureRect" type="TextureRect" parent="SingleUseButton"]
+layout_mode = 0
+offset_left = -20.0
+offset_top = -1.0
+offset_right = 133.0
+offset_bottom = 219.0
+mouse_filter = 2
+texture = ExtResource("9_pmmco")
+
+[node name="LevelsUi" parent="." instance=ExtResource("10_2x05i")]

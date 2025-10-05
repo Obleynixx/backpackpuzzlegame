@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://cvfr8fpmacu6t"]
+
+[ext_resource type="Texture2D" uid="uid://gn5q0bj3qi8x" path="res://Game/Sprites/ClothCampfire.png" id="1_y8omr"]
+[ext_resource type="Script" uid="uid://ceeta1260nu3f" path="res://InventorySystem/Data/ItemData.gd" id="2_sb7a5"]
+
+[resource]
+script = ExtResource("2_sb7a5")
+id = "ClothCampfire123"
+displayName = "ClothCampfire"
+icon = ExtResource("1_y8omr")
+metadata/_custom_type_script = "uid://ceeta1260nu3f"
