@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=3 uid="uid://dv6vw27f0q3"]
+
+[ext_resource type="FontFile" uid="uid://dmxm45lclxcxy" path="res://Game/Jersey_10/Jersey10-Regular.ttf" id="1_mb6sd"]
+[ext_resource type="Script" uid="uid://ce847ms4i4vkn" path="res://Game/IntroButton.gd" id="2_p07om"]
+
+[node name="Intro" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 1147.0
+offset_bottom = 637.0
+
+[node name="Label2" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 27.0
+offset_right = 1003.0
+offset_bottom = 235.0
+theme_override_fonts/font = ExtResource("1_mb6sd")
+theme_override_font_sizes/font_size = 91
+text = "Set things on fire,
+Clear out the backpack"
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 222.0
+offset_right = 1008.0
+offset_bottom = 430.0
+theme_override_fonts/font = ExtResource("1_mb6sd")
+theme_override_font_sizes/font_size = 91
+text = "Taque fogo nas coisas,
+e esvazie sua mochila"
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 458.0
+offset_top = 480.0
+offset_right = 639.0
+offset_bottom = 513.0
+theme_override_fonts/font = ExtResource("1_mb6sd")
+theme_override_font_sizes/font_size = 36
+text = "Continue"
+script = ExtResource("2_p07om")
+next_scene_path = "uid://xlpj52wsvs53"
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 221.0
+offset_right = 1050.0
+offset_bottom = 234.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -2
+offset_left = -24.0
+offset_top = -12.0
+offset_right = 1172.0
+offset_bottom = 664.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

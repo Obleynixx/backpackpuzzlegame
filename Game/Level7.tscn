@@ -1,0 +1,46 @@
+[gd_scene load_steps=12 format=3 uid="uid://dtlp16y8hvy3l"]
+
+[ext_resource type="Script" uid="uid://caqk1chuarsvj" path="res://Game/main_scene.gd" id="1_mtqm6"]
+[ext_resource type="Script" uid="uid://ceeta1260nu3f" path="res://InventorySystem/Data/ItemData.gd" id="2_hx04t"]
+[ext_resource type="Resource" uid="uid://bdrbxt0gn8qbf" path="res://Game/Items/WetTwig.tres" id="3_0r8qn"]
+[ext_resource type="Resource" uid="uid://cvfr8fpmacu6t" path="res://Game/Items/ClothCampfire.tres" id="4_mtqm6"]
+[ext_resource type="Resource" uid="uid://fgujni8ja3xj" path="res://Game/Items/Twig.tres" id="5_1tekd"]
+[ext_resource type="Resource" uid="uid://bnjdhdjsg25oa" path="res://Game/Items/Cloth.tres" id="6_p2iw7"]
+[ext_resource type="PackedScene" uid="uid://cqx0vciss025t" path="res://InventorySystem/View/InventoryView.tscn" id="7_16stv"]
+[ext_resource type="Resource" uid="uid://chuymcidlgte4" path="res://Game/Items/LitTorch.tres" id="7_hx04t"]
+[ext_resource type="Script" uid="uid://c1obvl524mro2" path="res://InventorySystem/View/SingleUseButton.gd" id="8_w2lyd"]
+[ext_resource type="Texture2D" uid="uid://cnme4qwvpgadg" path="res://Game/Sprites/LigherTest.png" id="9_o2dlo"]
+[ext_resource type="PackedScene" uid="uid://qi455nvvu1hw" path="res://Game/Levels_UI.tscn" id="10_slyn3"]
+
+[node name="Level7" type="Node2D" node_paths=PackedStringArray("view")]
+script = ExtResource("1_mtqm6")
+view = NodePath("InventoryView")
+firstItems = Array[ExtResource("2_hx04t")]([ExtResource("3_0r8qn"), ExtResource("4_mtqm6"), ExtResource("5_1tekd"), ExtResource("6_p2iw7"), ExtResource("7_hx04t"), ExtResource("6_p2iw7"), ExtResource("7_hx04t")])
+next_scene_path = "uid://t8c56ghd3tb"
+
+[node name="InventoryView" parent="." instance=ExtResource("7_16stv")]
+offset_left = -1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = 1.0
+
+[node name="SingleUseButton" type="Button" parent="."]
+visible = false
+offset_left = 175.0
+offset_top = 190.0
+offset_right = 287.0
+offset_bottom = 420.0
+script = ExtResource("8_w2lyd")
+singleUseID = "Lighter"
+inventoryView = NodePath("../InventoryView")
+
+[node name="TextureRect" type="TextureRect" parent="SingleUseButton"]
+layout_mode = 0
+offset_left = -20.0
+offset_top = -1.0
+offset_right = 133.0
+offset_bottom = 219.0
+mouse_filter = 2
+texture = ExtResource("9_o2dlo")
+
+[node name="LevelsUi" parent="." instance=ExtResource("10_slyn3")]
